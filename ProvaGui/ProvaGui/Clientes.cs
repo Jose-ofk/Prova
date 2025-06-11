@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace ProvaGui
 {
-    public partial class Principal: Form
+    public partial class Clientes: Form
     {
-        public Principal()
+        public Clientes()
         {
             InitializeComponent();
-        }
-
-        private void btnCliente_Click(object sender, EventArgs e)
-        {
-            Clientes clt = new Clientes();
-            clt.ShowDialog();
         }
     }
 }

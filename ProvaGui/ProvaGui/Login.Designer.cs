@@ -1,6 +1,6 @@
 ﻿namespace ProvaGui
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// Variável de designer necessária.

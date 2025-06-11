@@ -43,6 +43,7 @@
             this.btnCliente.TabIndex = 2;
             this.btnCliente.Text = "Cadastro de Clientes";
             this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
             // btnProduto
             // 
@@ -77,7 +78,7 @@
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Size = new System.Drawing.Size(118, 23);
             this.btnConsulta.TabIndex = 6;
-            this.btnConsulta.Text = "Cadastro de Usuários";
+            this.btnConsulta.Text = "Consultar Pedidos";
             this.btnConsulta.UseVisualStyleBackColor = true;
             // 
             // Principal
