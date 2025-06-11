@@ -1,0 +1,11 @@
+C:\Users\usuario\source\repos\Prova\ProvaGui\ProvaGui\bin\Debug\ProvaGui.exe.config
+C:\Users\usuario\source\repos\Prova\ProvaGui\ProvaGui\bin\Debug\ProvaGui.exe
+C:\Users\usuario\source\repos\Prova\ProvaGui\ProvaGui\bin\Debug\ProvaGui.pdb
+C:\Users\usuario\source\repos\Prova\ProvaGui\ProvaGui\obj\Debug\ProvaGui.csproj.AssemblyReference.cache
+C:\Users\usuario\source\repos\Prova\ProvaGui\ProvaGui\obj\Debug\ProvaGui.Form1.resources
+C:\Users\usuario\source\repos\Prova\ProvaGui\ProvaGui\obj\Debug\ProvaGui.Principal.resources
+C:\Users\usuario\source\repos\Prova\ProvaGui\ProvaGui\obj\Debug\ProvaGui.Properties.Resources.resources
+C:\Users\usuario\source\repos\Prova\ProvaGui\ProvaGui\obj\Debug\ProvaGui.csproj.GenerateResource.cache
+C:\Users\usuario\source\repos\Prova\ProvaGui\ProvaGui\obj\Debug\ProvaGui.csproj.CoreCompileInputs.cache
+C:\Users\usuario\source\repos\Prova\ProvaGui\ProvaGui\obj\Debug\ProvaGui.exe
+C:\Users\usuario\source\repos\Prova\ProvaGui\ProvaGui\obj\Debug\ProvaGui.pdb

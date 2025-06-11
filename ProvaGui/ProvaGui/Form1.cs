@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,23 +11,44 @@ using System.Windows.Forms;
 
 namespace ProvaGui
 {
-    public partial class Form1: Form
+    public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
         }
 
+        string caminhoCsv = "C:\\Users\\usuario\\source\\repos\\Prova\\Dados\\usuarios.csv";
+
         private void btnLogar_Click(object sender, EventArgs e)
         {
             string admin = "ADMIN";
             string senha = "123";
 
-            if(txtUsuario.Text == admin && txtSenha.Text == senha)
+            if (txtUsuario.Text == admin && txtSenha.Text == senha)
             {
+                MessageBox.Show($"Seja bem-vindo, {admin}!");
                 Principal princ = new Principal();
                 this.Hide();
                 princ.Show();
+            }
+            else
+            {
+                string[] linhas = File.ReadAllLines(caminhoCsv);
+                foreach(string linha in linhas)
+                {
+                    string[] dados = linha.Split(';');
+
+                    string usuario = dados[0].Trim();
+                    string senhaUser = dados[1].Trim();
+                    if(txtUsuario.Text == usuario && txtSenha.Text == senhaUser)
+                    {
+                        MessageBox.Show($"Seja bem-vindo, {usuario}!");
+                        Principal princ = new Principal();
+                        this.Hide();
+                        princ.Show();
+                    }
+                }
             }
         }
     }

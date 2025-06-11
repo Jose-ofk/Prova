@@ -7,11 +7,11 @@
       "RelativeMoniker": "D:0:0:{96E689AB-9343-4FAA-91CE-2F6195BA33B0}|ProvaGui\\ProvaGui.csproj|solutionrelative:provagui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{96E689AB-9343-4FAA-91CE-2F6195BA33B0}|ProvaGui\\ProvaGui.csproj|c:\\users\\usuario\\source\\repos\\prova\\provagui\\provagui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{96E689AB-9343-4FAA-91CE-2F6195BA33B0}|ProvaGui\\ProvaGui.csproj|C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\provagui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{96E689AB-9343-4FAA-91CE-2F6195BA33B0}|ProvaGui\\ProvaGui.csproj|solutionrelative:provagui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{96E689AB-9343-4FAA-91CE-2F6195BA33B0}|ProvaGui\\ProvaGui.csproj|c:\\users\\usuario\\source\\repos\\prova\\provagui\\provagui\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{96E689AB-9343-4FAA-91CE-2F6195BA33B0}|ProvaGui\\ProvaGui.csproj|C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\provagui\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{96E689AB-9343-4FAA-91CE-2F6195BA33B0}|ProvaGui\\ProvaGui.csproj|solutionrelative:provagui\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -37,8 +37,7 @@
               "ToolTip": "C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\ProvaGui\\Principal.cs [Design]",
               "RelativeToolTip": "ProvaGui\\Principal.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T03:00:05.15Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-11T03:00:05.15Z"
             },
             {
               "$type": "Document",
@@ -48,7 +47,7 @@
               "RelativeDocumentMoniker": "ProvaGui\\Form1.cs",
               "ToolTip": "C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\ProvaGui\\Form1.cs",
               "RelativeToolTip": "ProvaGui\\Form1.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAIA2wBsAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-11T02:44:47.651Z",
               "EditorCaption": ""
@@ -62,8 +61,7 @@
               "ToolTip": "C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\ProvaGui\\Form1.cs [Design]",
               "RelativeToolTip": "ProvaGui\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T02:07:33.406Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-11T02:07:33.406Z"
             }
           ]
         }
