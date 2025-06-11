@@ -22,5 +22,11 @@ namespace ProvaGui
             Clientes clt = new Clientes();
             clt.ShowDialog();
         }
+
+        private void btnProduto_Click(object sender, EventArgs e)
+        {
+            Produtos prd = new Produtos();
+            prd.ShowDialog();
+        }
     }
 }

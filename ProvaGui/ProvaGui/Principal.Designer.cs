@@ -53,6 +53,7 @@
             this.btnProduto.TabIndex = 3;
             this.btnProduto.Text = "Cadastro de Produtos";
             this.btnProduto.UseVisualStyleBackColor = true;
+            this.btnProduto.Click += new System.EventHandler(this.btnProduto_Click);
             // 
             // btnPedido
             // 
