@@ -28,5 +28,11 @@ namespace ProvaGui
             Produtos prd = new Produtos();
             prd.ShowDialog();
         }
+
+        private void btnPedido_Click(object sender, EventArgs e)
+        {
+            Pedidos ped = new Pedidos();
+            ped.ShowDialog();
+        }
     }
 }

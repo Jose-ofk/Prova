@@ -63,6 +63,7 @@
             this.btnPedido.TabIndex = 4;
             this.btnPedido.Text = "Cadastro de Pedidos";
             this.btnPedido.UseVisualStyleBackColor = true;
+            this.btnPedido.Click += new System.EventHandler(this.btnPedido_Click);
             // 
             // btnUsuario
             // 
