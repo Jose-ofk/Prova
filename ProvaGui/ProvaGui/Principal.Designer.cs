@@ -82,6 +82,7 @@
             this.btnConsulta.TabIndex = 6;
             this.btnConsulta.Text = "Consultar Pedidos";
             this.btnConsulta.UseVisualStyleBackColor = true;
+            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
             // Principal
             // 

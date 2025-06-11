@@ -34,5 +34,11 @@ namespace ProvaGui
             Pedidos ped = new Pedidos();
             ped.ShowDialog();
         }
+
+        private void btnConsulta_Click(object sender, EventArgs e)
+        {
+            Consulta con = new Consulta();
+            con.ShowDialog();
+        }
     }
 }
