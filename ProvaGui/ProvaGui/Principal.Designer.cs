@@ -73,6 +73,7 @@
             this.btnUsuario.TabIndex = 5;
             this.btnUsuario.Text = "Cadastro de Usuários";
             this.btnUsuario.UseVisualStyleBackColor = true;
+            this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
             // 
             // btnConsulta
             // 

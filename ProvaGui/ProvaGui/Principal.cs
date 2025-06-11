@@ -40,5 +40,11 @@ namespace ProvaGui
             Consulta con = new Consulta();
             con.ShowDialog();
         }
+
+        private void btnUsuario_Click(object sender, EventArgs e)
+        {
+            Usuario usr = new Usuario();
+            usr.ShowDialog();
+        }
     }
 }
