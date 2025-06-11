@@ -16,5 +16,18 @@ namespace ProvaGui
         {
             InitializeComponent();
         }
+
+        private void btnLogar_Click(object sender, EventArgs e)
+        {
+            string admin = "ADMIN";
+            string senha = "123";
+
+            if(txtUsuario.Text == admin && txtSenha.Text == senha)
+            {
+                Principal princ = new Principal();
+                this.Hide();
+                princ.Show();
+            }
+        }
     }
 }
