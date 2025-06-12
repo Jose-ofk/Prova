@@ -30,7 +30,6 @@
         {
             this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lstPedido = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.mskCpf = new System.Windows.Forms.MaskedTextBox();
             this.lblNome = new System.Windows.Forms.Label();
@@ -42,6 +41,8 @@
             this.btnEnviar = new System.Windows.Forms.Button();
             this.lblValor = new System.Windows.Forms.Label();
             this.lblQtdItem = new System.Windows.Forms.Label();
+            this.dgvPedidos = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             this.SuspendLayout();
             // 
             // txtId
@@ -59,14 +60,6 @@
             this.label1.Size = new System.Drawing.Size(77, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "CPF do Cliente";
-            // 
-            // lstPedido
-            // 
-            this.lstPedido.FormattingEnabled = true;
-            this.lstPedido.Location = new System.Drawing.Point(32, 135);
-            this.lstPedido.Name = "lstPedido";
-            this.lstPedido.Size = new System.Drawing.Size(734, 277);
-            this.lstPedido.TabIndex = 2;
             // 
             // label2
             // 
@@ -163,11 +156,20 @@
             this.lblQtdItem.TabIndex = 18;
             this.lblQtdItem.Text = "Quantidade de itens:";
             // 
+            // dgvPedidos
+            // 
+            this.dgvPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPedidos.Location = new System.Drawing.Point(32, 139);
+            this.dgvPedidos.Name = "dgvPedidos";
+            this.dgvPedidos.Size = new System.Drawing.Size(734, 273);
+            this.dgvPedidos.TabIndex = 19;
+            // 
             // Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvPedidos);
             this.Controls.Add(this.lblQtdItem);
             this.Controls.Add(this.lblValor);
             this.Controls.Add(this.btnEnviar);
@@ -179,11 +181,11 @@
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.mskCpf);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lstPedido);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtId);
             this.Name = "Pedidos";
             this.Text = "Pedidos";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,7 +195,6 @@
 
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox lstPedido;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox mskCpf;
         private System.Windows.Forms.Label lblNome;
@@ -205,5 +206,6 @@
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.Label lblValor;
         private System.Windows.Forms.Label lblQtdItem;
+        private System.Windows.Forms.DataGridView dgvPedidos;
     }
 }

@@ -37,9 +37,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtCodigoDeletar = new System.Windows.Forms.TextBox();
             this.btnBuscarDeletar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtCodigoEditar = new System.Windows.Forms.TextBox();
             this.btnBuscarEditar = new System.Windows.Forms.Button();
@@ -75,6 +75,7 @@
             this.btnCadastrar.TabIndex = 2;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // dgvProdutos
             // 
@@ -128,15 +129,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Deletar Produto";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 19);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 13);
-            this.label5.TabIndex = 32;
-            this.label5.Text = "Código";
-            // 
             // txtCodigoDeletar
             // 
             this.txtCodigoDeletar.Location = new System.Drawing.Point(6, 35);
@@ -152,6 +144,15 @@
             this.btnBuscarDeletar.TabIndex = 29;
             this.btnBuscarDeletar.Text = "Buscar";
             this.btnBuscarDeletar.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 13);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "Código";
             // 
             // groupBox1
             // 
@@ -225,6 +226,7 @@
             this.Controls.Add(this.txtNome);
             this.Name = "Produtos";
             this.Text = "Produtos";
+            this.Load += new System.EventHandler(this.Produtos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
