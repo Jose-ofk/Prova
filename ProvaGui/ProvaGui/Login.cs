@@ -28,7 +28,7 @@ namespace ProvaGui
             if (txtUsuario.Text == admin && txtSenha.Text == senha)
             {
                 MessageBox.Show($"Seja bem-vindo, {admin}!");
-                Principal princ = new Principal();
+                Principal princ = new Principal(admin);
                 this.Hide();
                 princ.Show();
             }
@@ -44,7 +44,7 @@ namespace ProvaGui
                     if(txtUsuario.Text == usuario && txtSenha.Text == senhaUser)
                     {
                         MessageBox.Show($"Seja bem-vindo, {usuario}!");
-                        Principal princ = new Principal();
+                        Principal princ = new Principal(usuario);
                         this.Hide();
                         princ.Show();
                     }

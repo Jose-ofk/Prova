@@ -12,9 +12,11 @@ namespace ProvaGui
 {
     public partial class Principal: Form
     {
-        public Principal()
+        string UsuarioA;
+        public Principal(string usuarioA)
         {
             InitializeComponent();
+            UsuarioA = usuarioA;
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
@@ -43,7 +45,7 @@ namespace ProvaGui
 
         private void btnUsuario_Click(object sender, EventArgs e)
         {
-            Usuario usr = new Usuario();
+            Usuario usr = new Usuario(UsuarioA);
             usr.ShowDialog();
         }
     }

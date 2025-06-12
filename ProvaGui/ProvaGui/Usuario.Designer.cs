@@ -71,6 +71,7 @@
             this.btnCadastrar.TabIndex = 2;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // label2
             // 
@@ -103,7 +104,7 @@
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Location = new System.Drawing.Point(642, 81);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(149, 100);
+            this.groupBox1.Size = new System.Drawing.Size(149, 148);
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Editar Senha";
@@ -178,13 +179,14 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvUsuario);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtUsuario);
             this.Name = "Usuario";
-            this.Text = "Usuario";
+            this.Text = "Cadastro de Usuário";
+            this.Load += new System.EventHandler(this.Usuario_Load);
+            this.Controls.SetChildIndex(this.btnCadastrar, 0);
+            this.Controls.SetChildIndex(this.dgvUsuario, 0);
+            this.Controls.SetChildIndex(this.groupBox1, 0);
+            this.Controls.SetChildIndex(this.groupBox2, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
