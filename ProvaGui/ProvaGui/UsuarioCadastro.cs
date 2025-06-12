@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,6 +25,8 @@ namespace ProvaGui
 
         private void UsuarioCadastro_Load(object sender, EventArgs e)
         {
+            carregarCsv();
+
             if (UsuarioA != "ADMIN")
             {
                 MessageBox.Show("Você pode alterar apenas a sua senha!");
@@ -64,16 +67,16 @@ namespace ProvaGui
             bool senhaAlterada = false;
 
             string[] linhas = File.ReadAllLines(caminhoCsv);
-            foreach(string linha in linhas)
+            for(int i = 0; i < linhas.Length; i++)
             {
-                string[] dados = linha.Split(';');
+                string[] dados = linhas[i].Split(';');
 
                 string usuario = dados[0].Trim();
                 string senhaUser = dados[1].Trim();
 
                 if(usuario == UsuarioA)
                 {
-                    linhas[linha.Length] = $"{usuario};{senhaAtualizada}";
+                    linhas[i] = $"{usuario};{senhaAtualizada}";
                     senhaAlterada = true;
                 }
 
@@ -87,5 +90,26 @@ namespace ProvaGui
                 }
             }
         }
+        
+        public void carregarCsv()
+        {
+            dgvUsuario.Columns.Add("Usuário", "Usuário");
+            dgvUsuario.Columns.Add("Senha", "Senha");
+
+            string[] linhas = File.ReadAllLines(caminhoCsv);
+
+            foreach(string linha in linhas)
+            {
+                string[] dados = linha.Split(';');
+
+                if(dados.Length >= 2)
+                {
+                    string usuario = dados[0];
+                    string senha = dados[1];
+                    dgvUsuario.Rows.Add(usuario, senha);
+                }
+            }
+        }
+
     }
 }
