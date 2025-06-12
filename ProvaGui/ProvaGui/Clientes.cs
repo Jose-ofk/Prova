@@ -20,7 +20,7 @@ namespace ProvaGui
     {
         private static readonly HttpClient client = new HttpClient();
         string caminhoCsv = "C:\\Users\\usuario\\source\\repos\\Prova\\Dados\\clientes.csv";
-
+        int indiceEdicao = -1;
         public Clientes()
         {
             InitializeComponent();
@@ -91,16 +91,26 @@ namespace ProvaGui
 
             var linhas = File.ReadAllLines(caminhoCsv).ToList();
 
-            foreach (string linha in linhas.Skip(1))
+            if (indiceEdicao == -1)
             {
-
-                if (linha.Split(';')[2] == cpf)
+                foreach (string linha in linhas.Skip(1))
                 {
-                    MessageBox.Show("O CPF já está cadastrado!", "Aviso!", MessageBoxButtons.OK);
-                    return;
+
+                    if (linha.Split(';')[2] == cpf)
+                    {
+                        MessageBox.Show("O CPF já está cadastrado!", "Aviso!", MessageBoxButtons.OK);
+                        return;
+                    }
                 }
+                linhas.Add($"{nome};{email};{cpf};{telefone};{whats};{cep};{logradouro};{numero};{bairro};{cidade};{estado}");
             }
-            linhas.Add($"{nome};{email};{cpf};{telefone};{whats};{cep};{logradouro};{numero};{bairro};{cidade};{estado}");
+            else
+            {
+                linhas[indiceEdicao + 1] = $"{nome};{email};{cpf};{telefone};{whats};{cep};{logradouro};{numero};{bairro};{cidade};{estado}";
+                indiceEdicao = -1;
+                btnCadastrar.Text = "Cadastrar";
+            }
+
             File.WriteAllLines(caminhoCsv, linhas);
 
             txtNome.Clear();
@@ -159,7 +169,63 @@ namespace ProvaGui
             dgvClientes.Columns.Add("Cidade", "Cidade");
             dgvClientes.Columns.Add("Estado", "Estado");
         }
+        private void editarCliente()
+        {
+          
+                string cpf = mskCpfEditar.Text;
 
+                if (string.IsNullOrEmpty(cpf))
+                {
+                    MessageBox.Show("Os campos não podem estar vazios", "Aviso", MessageBoxButtons.OK);
+                    return;
+                }
+
+                var linhas = File.ReadAllLines(caminhoCsv).ToList();
+
+                foreach (string linha in linhas.Skip(1))
+                {
+                    string[] dados = linha.Split(';');
+                    if (linha.Split(';')[2] == cpf)
+                    {
+                        txtNome.Text = dados[0].ToString();
+                        txtEmail.Text = dados[1].ToString(); ;
+                        mskCpf.Text = dados[2].ToString(); ;
+                        mskTelefone.Text = dados[3].ToString();
+                        mskWhatsapp.Text = dados[4].ToString();
+                        txtCep.Text = dados[5].ToString();
+                        txtLogradouro.Text = dados[6].ToString();
+                        txtNumero.Text = dados[7].ToString();
+                        txtBairro.Text = dados[8].ToString();
+                        txtCidade.Text = dados[9].ToString();
+                        txtEstado.Text = dados[10].ToString();
+
+                        btnCadastrar.Text = "Editar";
+                    }
+                }
+                indiceEdicao += 1;
+        }
+
+        private void excluirCliente()
+        {
+            string cpf = mskCpfDeletar.Text;
+
+            if (string.IsNullOrEmpty(cpf))
+            {
+                MessageBox.Show("Os campos não podem estar vazios", "Aviso", MessageBoxButtons.OK);
+                return;
+            }
+
+            var linhas = File.ReadAllLines(caminhoCsv).ToList();
+
+            foreach (string linha in linhas.Skip(1))
+            {
+                string[] dados = linha.Split(';');
+                if (linha.Split(';')[2] == cpf)
+                {
+                    
+                }
+            }
+        }
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             buscarCepAsync(txtCep.Text);
@@ -174,6 +240,11 @@ namespace ProvaGui
         {
             adicionarColunas();
             carregarCsv();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            editarCliente();
         }
     }
 }

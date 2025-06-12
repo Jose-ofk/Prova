@@ -53,8 +53,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.mskCpfEditar = new System.Windows.Forms.MaskedTextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.mskCpfDeletar = new System.Windows.Forms.MaskedTextBox();
@@ -270,23 +270,24 @@
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // button1
+            // btnEditar
             // 
-            this.button1.Location = new System.Drawing.Point(6, 71);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 23);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnEditar.Location = new System.Drawing.Point(6, 71);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(139, 23);
+            this.btnEditar.TabIndex = 28;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // button2
+            // btnExcluir
             // 
-            this.button2.Location = new System.Drawing.Point(6, 71);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 23);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "Buscar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnExcluir.Location = new System.Drawing.Point(6, 71);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(139, 23);
+            this.btnExcluir.TabIndex = 29;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
             // 
             // mskCpfEditar
             // 
@@ -322,7 +323,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnEditar);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.mskCpfEditar);
             this.groupBox1.Location = new System.Drawing.Point(649, 209);
@@ -334,7 +335,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.btnExcluir);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.mskCpfDeletar);
             this.groupBox2.Location = new System.Drawing.Point(649, 315);
@@ -416,8 +417,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.MaskedTextBox mskCpfEditar;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.MaskedTextBox mskCpfDeletar;
