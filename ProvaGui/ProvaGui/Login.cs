@@ -48,6 +48,10 @@ namespace ProvaGui
                         this.Hide();
                         princ.Show();
                     }
+                    else
+                    {
+                        MessageBox.Show("Usuario ou senha inválidos!", "Erro");
+                    }
                 }
             }
         }

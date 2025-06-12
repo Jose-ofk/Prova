@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace ProvaGui
 {
-    public partial class UsuarioCadastro: Form
+    public partial class UsuarioCadastro : Form
     {
         string UsuarioA;
         public UsuarioCadastro(string UsuarioA)
@@ -20,7 +20,7 @@ namespace ProvaGui
             InitializeComponent();
             this.UsuarioA = UsuarioA;
         }
-        
+
         string caminhoCsv = "C:\\Users\\usuario\\source\\repos\\Prova\\Dados\\usuarios.csv";
 
         private void UsuarioCadastro_Load(object sender, EventArgs e)
@@ -43,7 +43,7 @@ namespace ProvaGui
 
                 txtUsuarioEditar.Text = UsuarioA;
 
-                string [] linhas = File.ReadAllLines(caminhoCsv);
+                string[] linhas = File.ReadAllLines(caminhoCsv);
                 foreach (string linha in linhas)
                 {
                     string[] dados = linha.Split(';');
@@ -51,7 +51,7 @@ namespace ProvaGui
                     string usuario = dados[0].Trim();
                     string senhaUser = dados[1].Trim();
 
-                    if (UsuarioA == usuario) 
+                    if (UsuarioA == usuario)
                     {
                         txtSenhaEditar.Text = senhaUser;
                         break;
@@ -64,12 +64,44 @@ namespace ProvaGui
         {
             string usuario = txtUsuario.Text;
             string senha = txtSenhaUsuario.Text;
+
+            if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(senha))
+            {
+                MessageBox.Show("Os campos não podem estar vazios", "Aviso", MessageBoxButtons.OK);
+                return;
+            }
+
+            var linhas = File.ReadAllLines(caminhoCsv).ToList();
+
+            foreach (string linha in linhas.Skip(1))
+            {
+
+                if (linha.Split(';')[0] == usuario)
+                {
+                    MessageBox.Show("O usuário já existe", "Aviso!", MessageBoxButtons.OK);
+                    return;
+                }
+            }
+            linhas.Add($"{usuario};{senha}");
+
+            File.WriteAllLines(caminhoCsv, linhas);
+
+            txtSenhaUsuario.Clear();
+            txtUsuario.Clear();
+            carregarCsv();
         }
 
         private void btnEditarSenha_Click(object sender, EventArgs e)
         {
+            string usuarioAtualizado = txtUsuarioEditar.Text.Trim();
             string senhaAtualizada = txtSenhaEditar.Text.Trim();
             bool senhaAlterada = false;
+
+            if (string.IsNullOrEmpty(usuarioAtualizado) || string.IsNullOrEmpty(senhaAtualizada))
+            {
+                MessageBox.Show("Os campos não podem estar vazios", "Aviso", MessageBoxButtons.OK);
+                return;
+            }
 
             string[] linhas = File.ReadAllLines(caminhoCsv);
             for(int i = 0; i < linhas.Length; i++)
@@ -79,23 +111,24 @@ namespace ProvaGui
                 string usuario = dados[0].Trim();
                 string senhaUser = dados[1].Trim();
 
-                if(usuario == UsuarioA)
+                if(usuario == txtUsuarioEditar.Text)
                 {
                     linhas[i] = $"{usuario};{senhaAtualizada}";
                     senhaAlterada = true;
                 }
-
-                if(senhaAlterada == true)
-                {
-                    File.WriteAllLines(caminhoCsv, linhas);
-                }
-                else
-                {
-                    MessageBox.Show("Erro! Não foi possivel encontrar o usuário!");
-                }
             }
+            if (senhaAlterada == true)
+            {
+                MessageBox.Show("Senha alterada com sucesso!", "Sucesso!");
+                File.WriteAllLines(caminhoCsv, linhas);
+            }
+            else
+            {
+                MessageBox.Show("Erro! Não foi possivel encontrar o usuário!");
+            }
+            carregarCsv();
         }
-        
+
         public void carregarCsv()
         {
             dgvUsuario.Rows.Clear();

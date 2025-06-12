@@ -3,32 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{96E689AB-9343-4FAA-91CE-2F6195BA33B0}|ProvaGui\\ProvaGui.csproj|c:\\users\\usuario\\source\\repos\\prova\\provagui\\provagui\\usuariocadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96E689AB-9343-4FAA-91CE-2F6195BA33B0}|ProvaGui\\ProvaGui.csproj|solutionrelative:provagui\\usuariocadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{96E689AB-9343-4FAA-91CE-2F6195BA33B0}|ProvaGui\\ProvaGui.csproj|c:\\users\\usuario\\source\\repos\\prova\\provagui\\provagui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96E689AB-9343-4FAA-91CE-2F6195BA33B0}|ProvaGui\\ProvaGui.csproj|solutionrelative:provagui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{96E689AB-9343-4FAA-91CE-2F6195BA33B0}|ProvaGui\\ProvaGui.csproj|C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\provagui\\usuariocadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{96E689AB-9343-4FAA-91CE-2F6195BA33B0}|ProvaGui\\ProvaGui.csproj|solutionrelative:provagui\\usuariocadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{96E689AB-9343-4FAA-91CE-2F6195BA33B0}|ProvaGui\\ProvaGui.csproj|c:\\users\\usuario\\source\\repos\\prova\\provagui\\provagui\\usuariocadastro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96E689AB-9343-4FAA-91CE-2F6195BA33B0}|ProvaGui\\ProvaGui.csproj|solutionrelative:provagui\\usuariocadastro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{96E689AB-9343-4FAA-91CE-2F6195BA33B0}|ProvaGui\\ProvaGui.csproj|c:\\users\\usuario\\source\\repos\\prova\\provagui\\provagui\\pedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{96E689AB-9343-4FAA-91CE-2F6195BA33B0}|ProvaGui\\ProvaGui.csproj|solutionrelative:provagui\\pedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{96E689AB-9343-4FAA-91CE-2F6195BA33B0}|ProvaGui\\ProvaGui.csproj|c:\\users\\usuario\\source\\repos\\prova\\provagui\\provagui\\consulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{96E689AB-9343-4FAA-91CE-2F6195BA33B0}|ProvaGui\\ProvaGui.csproj|solutionrelative:provagui\\consulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{96E689AB-9343-4FAA-91CE-2F6195BA33B0}|ProvaGui\\ProvaGui.csproj|C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\provagui\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{96E689AB-9343-4FAA-91CE-2F6195BA33B0}|ProvaGui\\ProvaGui.csproj|solutionrelative:provagui\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{96E689AB-9343-4FAA-91CE-2F6195BA33B0}|ProvaGui\\ProvaGui.csproj|c:\\users\\usuario\\source\\repos\\prova\\provagui\\provagui\\clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{96E689AB-9343-4FAA-91CE-2F6195BA33B0}|ProvaGui\\ProvaGui.csproj|solutionrelative:provagui\\clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{96E689AB-9343-4FAA-91CE-2F6195BA33B0}|ProvaGui\\ProvaGui.csproj|c:\\users\\usuario\\source\\repos\\prova\\provagui\\provagui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{96E689AB-9343-4FAA-91CE-2F6195BA33B0}|ProvaGui\\ProvaGui.csproj|solutionrelative:provagui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,87 +27,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UsuarioCadastro.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\ProvaGui\\UsuarioCadastro.cs",
-              "RelativeDocumentMoniker": "ProvaGui\\UsuarioCadastro.cs",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\ProvaGui\\UsuarioCadastro.cs",
-              "RelativeToolTip": "ProvaGui\\UsuarioCadastro.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAtwEAAAAAtAAAAAAAAAA==",
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\ProvaGui\\Login.cs",
+              "RelativeDocumentMoniker": "ProvaGui\\Login.cs",
+              "ToolTip": "C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\ProvaGui\\Login.cs",
+              "RelativeToolTip": "ProvaGui\\Login.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAASwBoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T15:00:30.734Z",
+              "WhenOpened": "2025-06-12T17:55:23.235Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UsuarioCadastro.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\ProvaGui\\UsuarioCadastro.cs",
-              "RelativeDocumentMoniker": "ProvaGui\\UsuarioCadastro.cs",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\ProvaGui\\UsuarioCadastro.cs [Design]",
-              "RelativeToolTip": "ProvaGui\\UsuarioCadastro.cs [Design]",
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\ProvaGui\\Login.cs",
+              "RelativeDocumentMoniker": "ProvaGui\\Login.cs",
+              "ToolTip": "C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\ProvaGui\\Login.cs [Design]",
+              "RelativeToolTip": "ProvaGui\\Login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T04:25:45.24Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UsuarioCadastro.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\ProvaGui\\UsuarioCadastro.Designer.cs",
-              "RelativeDocumentMoniker": "ProvaGui\\UsuarioCadastro.Designer.cs",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\ProvaGui\\UsuarioCadastro.Designer.cs",
-              "RelativeToolTip": "ProvaGui\\UsuarioCadastro.Designer.cs",
-              "ViewState": "AgIAAHoAAAAAAAAAAAAWwIgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T15:39:44.603Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Pedidos.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\ProvaGui\\Pedidos.cs",
-              "RelativeDocumentMoniker": "ProvaGui\\Pedidos.cs",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\ProvaGui\\Pedidos.cs [Design]",
-              "RelativeToolTip": "ProvaGui\\Pedidos.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T14:46:59.904Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Consulta.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\ProvaGui\\Consulta.cs",
-              "RelativeDocumentMoniker": "ProvaGui\\Consulta.cs",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\ProvaGui\\Consulta.cs [Design]",
-              "RelativeToolTip": "ProvaGui\\Consulta.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T14:46:40.442Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Clientes.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\ProvaGui\\Clientes.cs",
-              "RelativeDocumentMoniker": "ProvaGui\\Clientes.cs",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\ProvaGui\\Clientes.cs [Design]",
-              "RelativeToolTip": "ProvaGui\\Clientes.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T14:42:02Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Principal.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\ProvaGui\\Principal.cs",
-              "RelativeDocumentMoniker": "ProvaGui\\Principal.cs",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\Prova\\ProvaGui\\ProvaGui\\Principal.cs [Design]",
-              "RelativeToolTip": "ProvaGui\\Principal.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T03:00:05.15Z",
+              "WhenOpened": "2025-06-12T17:55:21.053Z",
               "EditorCaption": " [Design]"
             }
           ]
