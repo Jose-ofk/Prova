@@ -60,7 +60,32 @@ namespace ProvaGui
 
         private void btnEditarSenha_Click(object sender, EventArgs e)
         {
+            string senhaAtualizada = txtSenhaEditar.Text.Trim();
+            bool senhaAlterada = false;
 
+            string[] linhas = File.ReadAllLines(caminhoCsv);
+            foreach(string linha in linhas)
+            {
+                string[] dados = linha.Split(';');
+
+                string usuario = dados[0].Trim();
+                string senhaUser = dados[1].Trim();
+
+                if(usuario == UsuarioA)
+                {
+                    linhas[linha.Length] = $"{usuario};{senhaAtualizada}";
+                    senhaAlterada = true;
+                }
+
+                if(senhaAlterada == true)
+                {
+                    File.WriteAllLines(caminhoCsv, linhas);
+                }
+                else
+                {
+                    MessageBox.Show("Erro! Não foi possivel encontrar o usuário!");
+                }
+            }
         }
     }
 }
