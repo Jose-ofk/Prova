@@ -288,6 +288,7 @@
             this.btnExcluir.TabIndex = 29;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // mskCpfEditar
             // 

@@ -106,7 +106,7 @@ namespace ProvaGui
             }
             else
             {
-                linhas[indiceEdicao + 1] = $"{nome};{email};{cpf};{telefone};{whats};{cep};{logradouro};{numero};{bairro};{cidade};{estado}";
+                linhas[indiceEdicao] = $"{nome};{email};{cpf};{telefone};{whats};{cep};{logradouro};{numero};{bairro};{cidade};{estado}";
                 indiceEdicao = -1;
                 btnCadastrar.Text = "Cadastrar";
             }
@@ -182,7 +182,7 @@ namespace ProvaGui
 
                 var linhas = File.ReadAllLines(caminhoCsv).ToList();
 
-                foreach (string linha in linhas.Skip(1))
+                foreach (string linha in linhas)
                 {
                     string[] dados = linha.Split(';');
                     if (linha.Split(';')[2] == cpf)
@@ -208,7 +208,7 @@ namespace ProvaGui
         private void excluirCliente()
         {
             string cpf = mskCpfDeletar.Text;
-
+            string linhaExcluir = "";
             if (string.IsNullOrEmpty(cpf))
             {
                 MessageBox.Show("Os campos não podem estar vazios", "Aviso", MessageBoxButtons.OK);
@@ -217,12 +217,23 @@ namespace ProvaGui
 
             var linhas = File.ReadAllLines(caminhoCsv).ToList();
 
-            foreach (string linha in linhas.Skip(1))
+            foreach (string linha in linhas)
             {
                 string[] dados = linha.Split(';');
                 if (linha.Split(';')[2] == cpf)
                 {
-                    
+                    linhaExcluir = linha;
+                }
+            }
+
+            if (linhaExcluir != "")
+            {
+                var dialogo = MessageBox.Show("Deseja mesmo excluir este cliente para sempre?", "Aviso!", MessageBoxButtons.YesNo);
+                if(dialogo == DialogResult.Yes)
+                {
+                    linhas.Remove(linhaExcluir);
+                    File.WriteAllLines(caminhoCsv, linhas);
+                    carregarCsv();
                 }
             }
         }
@@ -245,6 +256,11 @@ namespace ProvaGui
         private void btnEditar_Click(object sender, EventArgs e)
         {
             editarCliente();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            excluirCliente();
         }
     }
 }
