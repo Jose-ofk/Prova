@@ -139,7 +139,7 @@ namespace ProvaGui
             {
                 string[] dados = linha.Split(';');
 
-                if(dados.Length >= 1)
+                if(dados.Length >= 2)
                 {
                     string usuario = dados[0];
                     string senha = dados[1];
