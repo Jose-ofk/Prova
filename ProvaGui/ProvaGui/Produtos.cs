@@ -93,6 +93,38 @@ namespace ProvaGui
             txtPreco.Clear();
             carregarCsv();
         }
+        private void excluirProduto()
+        {
+            string codigo = txtCodigoDeletar.Text;
+            string linhaExcluir = "";
+            if (string.IsNullOrEmpty(codigo))
+            {
+                MessageBox.Show("Os campos não podem estar vazios", "Aviso", MessageBoxButtons.OK);
+                return;
+            }
+
+            var linhas = File.ReadAllLines(caminhoCsv).ToList();
+
+            foreach (string linha in linhas)
+            {
+                string[] dados = linha.Split(';');
+                if (linha.Split(';')[3] == codigo)
+                {
+                    linhaExcluir = linha;
+                }
+            }
+
+            if (linhaExcluir != "")
+            {
+                var dialogo = MessageBox.Show("Deseja mesmo excluir este cliente para sempre?", "Aviso!", MessageBoxButtons.YesNo);
+                if (dialogo == DialogResult.Yes)
+                {
+                    linhas.Remove(linhaExcluir);
+                    File.WriteAllLines(caminhoCsv, linhas);
+                    carregarCsv();
+                }
+            }
+        }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
@@ -103,6 +135,12 @@ namespace ProvaGui
         private void Produtos_Load(object sender, EventArgs e)
         {
             adicionarColunas();
+            carregarCsv();
+        }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+            excluirProduto();
             carregarCsv();
         }
     }

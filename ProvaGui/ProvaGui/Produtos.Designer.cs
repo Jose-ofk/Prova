@@ -38,11 +38,11 @@
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtCodigoDeletar = new System.Windows.Forms.TextBox();
-            this.btnBuscarDeletar = new System.Windows.Forms.Button();
+            this.btnDeletar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtCodigoEditar = new System.Windows.Forms.TextBox();
-            this.btnBuscarEditar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
@@ -120,7 +120,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtCodigoDeletar);
-            this.groupBox2.Controls.Add(this.btnBuscarDeletar);
+            this.groupBox2.Controls.Add(this.btnDeletar);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Location = new System.Drawing.Point(648, 338);
             this.groupBox2.Name = "groupBox2";
@@ -136,14 +136,15 @@
             this.txtCodigoDeletar.Size = new System.Drawing.Size(130, 20);
             this.txtCodigoDeletar.TabIndex = 39;
             // 
-            // btnBuscarDeletar
+            // btnDeletar
             // 
-            this.btnBuscarDeletar.Location = new System.Drawing.Point(6, 71);
-            this.btnBuscarDeletar.Name = "btnBuscarDeletar";
-            this.btnBuscarDeletar.Size = new System.Drawing.Size(139, 23);
-            this.btnBuscarDeletar.TabIndex = 29;
-            this.btnBuscarDeletar.Text = "Buscar";
-            this.btnBuscarDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Location = new System.Drawing.Point(6, 71);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(139, 23);
+            this.btnDeletar.TabIndex = 29;
+            this.btnDeletar.Text = "Deletar";
+            this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // label5
             // 
@@ -157,7 +158,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtCodigoEditar);
-            this.groupBox1.Controls.Add(this.btnBuscarEditar);
+            this.groupBox1.Controls.Add(this.btnEditar);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Location = new System.Drawing.Point(648, 138);
             this.groupBox1.Name = "groupBox1";
@@ -173,14 +174,14 @@
             this.txtCodigoEditar.Size = new System.Drawing.Size(130, 20);
             this.txtCodigoEditar.TabIndex = 38;
             // 
-            // btnBuscarEditar
+            // btnEditar
             // 
-            this.btnBuscarEditar.Location = new System.Drawing.Point(6, 71);
-            this.btnBuscarEditar.Name = "btnBuscarEditar";
-            this.btnBuscarEditar.Size = new System.Drawing.Size(139, 23);
-            this.btnBuscarEditar.TabIndex = 28;
-            this.btnBuscarEditar.Text = "Buscar";
-            this.btnBuscarEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Location = new System.Drawing.Point(6, 71);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(139, 23);
+            this.btnEditar.TabIndex = 28;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
@@ -249,10 +250,10 @@
         private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtCodigoDeletar;
-        private System.Windows.Forms.Button btnBuscarDeletar;
+        private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtCodigoEditar;
-        private System.Windows.Forms.Button btnBuscarEditar;
+        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCodigo;
