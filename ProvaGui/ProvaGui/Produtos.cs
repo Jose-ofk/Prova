@@ -14,7 +14,7 @@ namespace ProvaGui
     public partial class Produtos: Form
     {
         string caminhoCsv = "C:\\Users\\usuario\\source\\repos\\Prova\\Dados\\produtos.csv";
-
+        int indiceEdicao = -1;
         public Produtos()
         {
             InitializeComponent();
@@ -48,10 +48,56 @@ namespace ProvaGui
             dgvProdutos.Columns.Add("Descrição", "Descrição");
             dgvProdutos.Columns.Add("Código", "Código");
         }
+        public void cadastrarProdutos()
+        {
+            string nome = txtNome.Text;
+            string preco = txtPreco.Text;
+            string desc = txtDesc.Text;
+            string codigo = txtCodigo.Text;
+
+
+            if (string.IsNullOrEmpty(nome) || string.IsNullOrEmpty(preco) ||
+                string.IsNullOrEmpty(desc) || string.IsNullOrEmpty(codigo))
+            {
+                MessageBox.Show("Os campos não podem estar vazios", "Aviso", MessageBoxButtons.OK);
+                return;
+            }
+
+            var linhas = File.ReadAllLines(caminhoCsv).ToList();
+
+            if (indiceEdicao == -1)
+            {
+                foreach (string linha in linhas.Skip(1))
+                {
+
+                    if (linha.Split(';')[3] == codigo)
+                    {
+                        MessageBox.Show("O CPF já está cadastrado!", "Aviso!", MessageBoxButtons.OK);
+                        return;
+                    }
+                }
+                linhas.Add($"{nome};{preco};{desc};{codigo}");
+            }
+            else
+            {
+                linhas[indiceEdicao] = $"{nome};{preco};{desc};{codigo}";
+                indiceEdicao = -1;
+                btnCadastrar.Text = "Cadastrar";
+            }
+
+            File.WriteAllLines(caminhoCsv, linhas);
+
+            txtNome.Clear();
+            txtCodigo.Clear();
+            txtDesc.Clear();
+            txtPreco.Clear();
+            carregarCsv();
+        }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-
+            cadastrarProdutos();
+            carregarCsv();
         }
 
         private void Produtos_Load(object sender, EventArgs e)

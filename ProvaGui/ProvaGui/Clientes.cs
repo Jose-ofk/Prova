@@ -16,7 +16,7 @@ using System.IO;
 namespace ProvaGui
 {
 
-    public partial class Clientes: Form
+    public partial class Clientes : Form
     {
         private static readonly HttpClient client = new HttpClient();
         string caminhoCsv = "C:\\Users\\usuario\\source\\repos\\Prova\\Dados\\clientes.csv";
@@ -77,12 +77,14 @@ namespace ProvaGui
             string cidade = txtCidade.Text;
             string estado = txtEstado.Text;
 
-            if (string.IsNullOrEmpty(nome) || string.IsNullOrEmpty(email) ||
+            if (
+                string.IsNullOrEmpty(nome) || string.IsNullOrEmpty(email) ||
                 string.IsNullOrEmpty(cpf) || string.IsNullOrEmpty(telefone) ||
                 string.IsNullOrEmpty(whats) || string.IsNullOrEmpty(cep) ||
                 string.IsNullOrEmpty(logradouro) || string.IsNullOrEmpty(numero) ||
                 string.IsNullOrEmpty(bairro) || string.IsNullOrEmpty(cidade) ||
-                string.IsNullOrEmpty(estado)
+                string.IsNullOrEmpty(estado) || cpf.Length < 14  || telefone.Length < 15 ||
+                whats.Length < 15
                )
             {
                 MessageBox.Show("Os campos não podem estar vazios", "Aviso", MessageBoxButtons.OK);

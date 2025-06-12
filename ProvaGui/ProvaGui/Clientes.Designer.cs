@@ -146,6 +146,7 @@
             // mskCpf
             // 
             this.mskCpf.Location = new System.Drawing.Point(429, 25);
+            this.mskCpf.Mask = "000,000,000-00";
             this.mskCpf.Name = "mskCpf";
             this.mskCpf.Size = new System.Drawing.Size(107, 20);
             this.mskCpf.TabIndex = 12;
@@ -153,13 +154,16 @@
             // mskTelefone
             // 
             this.mskTelefone.Location = new System.Drawing.Point(555, 25);
+            this.mskTelefone.Mask = "(00) 00000-0000";
             this.mskTelefone.Name = "mskTelefone";
+            this.mskTelefone.RejectInputOnFirstFailure = true;
             this.mskTelefone.Size = new System.Drawing.Size(107, 20);
             this.mskTelefone.TabIndex = 13;
             // 
             // mskWhatsapp
             // 
             this.mskWhatsapp.Location = new System.Drawing.Point(681, 25);
+            this.mskWhatsapp.Mask = "(00) 00000-0000";
             this.mskWhatsapp.Name = "mskWhatsapp";
             this.mskWhatsapp.Size = new System.Drawing.Size(107, 20);
             this.mskWhatsapp.TabIndex = 14;
@@ -293,6 +297,7 @@
             // mskCpfEditar
             // 
             this.mskCpfEditar.Location = new System.Drawing.Point(6, 45);
+            this.mskCpfEditar.Mask = "000,000,000-00";
             this.mskCpfEditar.Name = "mskCpfEditar";
             this.mskCpfEditar.Size = new System.Drawing.Size(139, 20);
             this.mskCpfEditar.TabIndex = 31;
@@ -309,6 +314,7 @@
             // mskCpfDeletar
             // 
             this.mskCpfDeletar.Location = new System.Drawing.Point(6, 45);
+            this.mskCpfDeletar.Mask = "000,000,000-00";
             this.mskCpfDeletar.Name = "mskCpfDeletar";
             this.mskCpfDeletar.Size = new System.Drawing.Size(139, 20);
             this.mskCpfDeletar.TabIndex = 33;
