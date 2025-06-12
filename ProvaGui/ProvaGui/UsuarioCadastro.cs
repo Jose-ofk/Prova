@@ -25,6 +25,11 @@ namespace ProvaGui
 
         private void UsuarioCadastro_Load(object sender, EventArgs e)
         {
+            dgvUsuario.Columns.Clear();
+            dgvUsuario.Columns.Add("Usuário", "Usuário");
+            dgvUsuario.Columns.Add("Senha", "Senha");
+
+            criarCsv();
             carregarCsv();
 
             if (UsuarioA != "ADMIN")
@@ -33,7 +38,6 @@ namespace ProvaGui
                 btnCadastrar.Enabled = false;
                 btnExcluir.Enabled = false;
                 txtUsuario.Enabled = false;
-                txtExcluirUsuario.Enabled = false;
                 txtSenhaUsuario.Enabled = false;
                 txtUsuarioEditar.Enabled = false;
 
@@ -58,7 +62,8 @@ namespace ProvaGui
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-
+            string usuario = txtUsuario.Text;
+            string senha = txtSenhaUsuario.Text;
         }
 
         private void btnEditarSenha_Click(object sender, EventArgs e)
@@ -93,8 +98,7 @@ namespace ProvaGui
         
         public void carregarCsv()
         {
-            dgvUsuario.Columns.Add("Usuário", "Usuário");
-            dgvUsuario.Columns.Add("Senha", "Senha");
+            dgvUsuario.Rows.Clear();
 
             string[] linhas = File.ReadAllLines(caminhoCsv);
 
@@ -102,7 +106,7 @@ namespace ProvaGui
             {
                 string[] dados = linha.Split(';');
 
-                if(dados.Length >= 2)
+                if(dados.Length >= 1)
                 {
                     string usuario = dados[0];
                     string senha = dados[1];
@@ -111,5 +115,35 @@ namespace ProvaGui
             }
         }
 
+        public void criarCsv()
+        {
+            if (!File.Exists(caminhoCsv))
+            {
+                using (StreamWriter sw = new StreamWriter(caminhoCsv)) 
+                {
+                    sw.WriteLine("Usuário;Senha");
+                }
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (dgvUsuario.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione uma linha para excluir!");
+                return;
+            }
+
+            var dialogo = MessageBox.Show("Deseja excluir esse usuário?", "Aviso!", MessageBoxButtons.YesNo);
+            if(dialogo == DialogResult.Yes)
+            {
+                int rowIndex = dgvUsuario.SelectedRows[0].Index;
+                var linhas = File.ReadLines(caminhoCsv).ToList();
+
+                linhas.RemoveAt(rowIndex);
+                File.WriteAllLines(caminhoCsv, linhas);
+                carregarCsv();
+            } 
+        }
     }
 }

@@ -30,10 +30,7 @@
         {
             this.txtSenhaUsuario = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtExcluirUsuario = new System.Windows.Forms.TextBox();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtUsuarioEditar = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,7 +41,6 @@
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
             this.SuspendLayout();
@@ -65,42 +61,15 @@
             this.label5.TabIndex = 46;
             this.label5.Text = "Senha";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.txtExcluirUsuario);
-            this.groupBox2.Controls.Add(this.btnExcluir);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(641, 339);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(149, 100);
-            this.groupBox2.TabIndex = 45;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Excluir Usuário";
-            // 
-            // txtExcluirUsuario
-            // 
-            this.txtExcluirUsuario.Location = new System.Drawing.Point(10, 45);
-            this.txtExcluirUsuario.Name = "txtExcluirUsuario";
-            this.txtExcluirUsuario.Size = new System.Drawing.Size(130, 20);
-            this.txtExcluirUsuario.TabIndex = 38;
-            // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(6, 71);
+            this.btnExcluir.Location = new System.Drawing.Point(651, 399);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(139, 23);
+            this.btnExcluir.Size = new System.Drawing.Size(139, 39);
             this.btnExcluir.TabIndex = 39;
             this.btnExcluir.Text = "Excluir Usuário";
             this.btnExcluir.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 29);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "Usuário";
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // groupBox1
             // 
@@ -198,18 +167,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSenhaUsuario);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvUsuario);
             this.Controls.Add(this.btnCadastrar);
             this.Name = "UsuarioCadastro";
             this.Text = "UsuarioCadastro";
             this.Load += new System.EventHandler(this.UsuarioCadastro_Load);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).EndInit();
@@ -222,10 +189,7 @@
 
         private System.Windows.Forms.TextBox txtSenhaUsuario;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtExcluirUsuario;
         private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtUsuarioEditar;
         private System.Windows.Forms.Label label4;
