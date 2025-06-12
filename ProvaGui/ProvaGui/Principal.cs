@@ -45,7 +45,7 @@ namespace ProvaGui
 
         private void btnUsuario_Click(object sender, EventArgs e)
         {
-            Usuario usr = new Usuario(UsuarioA);
+            UsuarioCadastro usr = new UsuarioCadastro(UsuarioA);
             usr.ShowDialog();
         }
     }

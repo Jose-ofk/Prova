@@ -13,4 +13,4 @@ C:\Users\usuario\source\repos\Prova\ProvaGui\ProvaGui\obj\Debug\ProvaGui.Login.r
 C:\Users\usuario\source\repos\Prova\ProvaGui\ProvaGui\obj\Debug\ProvaGui.Consulta.resources
 C:\Users\usuario\source\repos\Prova\ProvaGui\ProvaGui\obj\Debug\ProvaGui.Pedidos.resources
 C:\Users\usuario\source\repos\Prova\ProvaGui\ProvaGui\obj\Debug\ProvaGui.Produtos.resources
-C:\Users\usuario\source\repos\Prova\ProvaGui\ProvaGui\obj\Debug\ProvaGui.Usuario.resources
+C:\Users\usuario\source\repos\Prova\ProvaGui\ProvaGui\obj\Debug\ProvaGui.UsuarioCadastro.resources
