@@ -24,9 +24,11 @@ namespace ProvaGui
         {
             string admin = "ADMIN";
             string senha = "123";
+            bool encontrado = false;
 
             if (txtUsuario.Text == admin && txtSenha.Text == senha)
             {
+                encontrado = true;
                 MessageBox.Show($"Seja bem-vindo, {admin}!");
                 Principal princ = new Principal(admin);
                 this.Hide();
@@ -43,16 +45,17 @@ namespace ProvaGui
                     string senhaUser = dados[1].Trim();
                     if(txtUsuario.Text == usuario && txtSenha.Text == senhaUser)
                     {
+                        encontrado = true;
                         MessageBox.Show($"Seja bem-vindo, {usuario}!");
                         Principal princ = new Principal(usuario);
                         this.Hide();
                         princ.Show();
                     }
-                    else
-                    {
-                        MessageBox.Show("Usuario ou senha inválidos!", "Erro");
-                    }
                 }
+            }
+            if (!encontrado)
+            {
+                MessageBox.Show("O usuário não pode ser encontrado!", "Aviso!");
             }
         }
     }
