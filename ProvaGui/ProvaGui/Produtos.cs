@@ -125,6 +125,38 @@ namespace ProvaGui
                 }
             }
         }
+        private void editarProduto()
+        {
+
+            string codigo = txtCodigoEditar.Text;
+
+            if (string.IsNullOrEmpty(codigo))
+            {
+                MessageBox.Show("Os campos não podem estar vazios", "Aviso", MessageBoxButtons.OK);
+                return;
+            }
+
+            var dialogo = MessageBox.Show("Deseja atualizar esse produto?", "Aviso!", MessageBoxButtons.YesNo);
+            if(dialogo == DialogResult.Yes)
+            {
+                var linhas = File.ReadAllLines(caminhoCsv).ToList();
+
+                foreach (string linha in linhas)
+                {
+                    string[] dados = linha.Split(';');
+                    if (linha.Split(';')[3] == codigo)
+                    {
+                        txtNome.Text = dados[0].ToString();
+                        txtPreco.Text = dados[1].ToString(); ;
+                        txtDesc.Text = dados[2].ToString(); ;
+                        txtCodigo.Text = dados[3].ToString();
+
+                        btnCadastrar.Text = "Editar";
+                    }
+                }
+                indiceEdicao += 1;
+            }
+        }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
@@ -141,6 +173,12 @@ namespace ProvaGui
         private void btnDeletar_Click(object sender, EventArgs e)
         {
             excluirProduto();
+            carregarCsv();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            editarProduto();
             carregarCsv();
         }
     }
