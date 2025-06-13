@@ -72,7 +72,7 @@ namespace ProvaGui
 
                     if (linha.Split(';')[3] == codigo)
                     {
-                        MessageBox.Show("O CPF já está cadastrado!", "Aviso!", MessageBoxButtons.OK);
+                        MessageBox.Show("O Produto já está cadastrado!", "Aviso!", MessageBoxButtons.OK);
                         return;
                     }
                 }

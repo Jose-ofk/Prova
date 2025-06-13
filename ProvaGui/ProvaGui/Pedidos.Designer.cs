@@ -73,6 +73,7 @@
             // mskCpf
             // 
             this.mskCpf.Location = new System.Drawing.Point(32, 73);
+            this.mskCpf.Mask = "000,000,000-00";
             this.mskCpf.Name = "mskCpf";
             this.mskCpf.Size = new System.Drawing.Size(100, 20);
             this.mskCpf.TabIndex = 5;
@@ -110,6 +111,7 @@
             this.btnSalvar.TabIndex = 13;
             this.btnSalvar.Text = "Salvar Produto";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnBuscar
             // 
@@ -119,6 +121,7 @@
             this.btnBuscar.TabIndex = 14;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnRemover
             // 
@@ -185,6 +188,7 @@
             this.Controls.Add(this.txtId);
             this.Name = "Pedidos";
             this.Text = "Pedidos";
+            this.Load += new System.EventHandler(this.Pedidos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
