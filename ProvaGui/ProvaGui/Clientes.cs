@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json.Linq;
 using System.IO;
+using System.Text.RegularExpressions;
 
 
 namespace ProvaGui
@@ -84,10 +85,10 @@ namespace ProvaGui
                 string.IsNullOrEmpty(logradouro) || string.IsNullOrEmpty(numero) ||
                 string.IsNullOrEmpty(bairro) || string.IsNullOrEmpty(cidade) ||
                 string.IsNullOrEmpty(estado) || cpf.Length < 14  || telefone.Length < 15 ||
-                whats.Length < 15
+                whats.Length < 15|| !validarEmail(email)
                )
             {
-                MessageBox.Show("Os campos não podem estar vazios", "Aviso", MessageBoxButtons.OK);
+                MessageBox.Show("Preencha todos os campos corretamente!", "Aviso", MessageBoxButtons.OK);
                 return;
             }
 
@@ -170,6 +171,10 @@ namespace ProvaGui
             dgvClientes.Columns.Add("Bairro", "Bairro");
             dgvClientes.Columns.Add("Cidade", "Cidade");
             dgvClientes.Columns.Add("Estado", "Estado");
+        }
+        public bool validarEmail(string email)
+        {
+            return Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
         }
         private void editarCliente()
         {

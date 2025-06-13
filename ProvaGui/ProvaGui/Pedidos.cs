@@ -50,6 +50,7 @@ namespace ProvaGui
             dgvPedidos.Columns.Add("Preço", "Preço");
             dgvPedidos.Columns.Add("Descrição", "Descrição");
             dgvPedidos.Columns.Add("Código", "Código");
+            dgvPedidos.Columns.Add("Quantidade", "Quantidade");
         }
         public void buscarCliente()
         {
@@ -88,7 +89,7 @@ namespace ProvaGui
                     preco = dados[1];
                     desc = dados[2];
                     codigo = dados[3];
-                    linhasProduto.Add($"{nome};{preco};{desc};{codigo}");
+                    linhasProduto.Add($"{nome};{preco};{desc};{codigo};{txtQuantidade.Text}");
                     break;
                 }
             }
